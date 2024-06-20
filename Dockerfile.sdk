@@ -22,6 +22,8 @@ ARG APP_ROOT
 RUN apt-get -q -y update && \
     apt-get -q -y install \
     cmake \
+    cmake-curses-gui \
+    build-essential \
     ruby \
     ruby-parslet \
     # ADD YOUR PACKAGES HERE
