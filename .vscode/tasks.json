@@ -101,7 +101,7 @@
             "dependsOrder": "sequence",
             "dependsOn": [
                 "build-container-image-sdk-arm64",
-                // "create-mesa-arm64-debug-cmake-project"
+                "create-mesa-arm64-debug-cmake-project"
             ]
         },
         {
