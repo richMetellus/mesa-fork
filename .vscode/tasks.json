@@ -101,7 +101,7 @@
             "dependsOrder": "sequence",
             "dependsOn": [
                 "build-container-image-sdk-arm64",
-                "create-mesa-arm64-debug-cmake-project"
+                // "create-mesa-arm64-debug-cmake-project"
             ]
         },
         {
@@ -137,9 +137,11 @@
                 "-v",
                 "${workspaceFolder}:${config:torizon_app_root}",
                 "cross-toolchain-arm64-quickstartmesademo",
-                "cmake",
+                "${config:torizon_app_root}/build-arm64-debug/cmake",
                 "--build",
-                "build-arm64-debug"
+                "build-arm64-debug",
+                "--target",
+                "app_vsc7512"
             ],
             "problemMatcher": [
                 "$gcc"
