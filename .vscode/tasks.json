@@ -83,12 +83,14 @@
             "args": [
                 "docker",
                 "run",
+                "-w",
+                "${config:torizon_app_root}/build-arm64-debug",
                 "--rm",
                 "-v",
                 "${workspaceFolder}:${config:torizon_app_root}",
                 "cross-toolchain-arm64-quickstartmesademo",
-                "${config:torizon_app_root}/build-arm64-debug/cmake",
-                ".",
+                "./cmake",
+                "${config:torizon_app_root}",
                 "-Dapp_vsc7512=ON"
             ],
             "problemMatcher": [
