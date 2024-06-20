@@ -152,7 +152,8 @@
             },
             "dependsOrder": "sequence",
             "dependsOn": [
-                "build-configure-arm64"
+                "build-configure-arm64",
+                "create-mesa-arm64-debug-cmake-project"
             ]
         },
         {
