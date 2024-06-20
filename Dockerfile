@@ -24,6 +24,7 @@ RUN apt-get -q -y update && \
     cmake \
 # DO NOT REMOVE THIS LABEL: this is used for VS Code automation
     # __torizon_packages_dev_start__
+	libjson-c-dev:arm64 \
     # __torizon_packages_dev_end__
 # DO NOT REMOVE THIS LABEL: this is used for VS Code automation
     && \
@@ -58,6 +59,7 @@ ARG APP_ROOT
 RUN apt-get -y update && apt-get install -y --no-install-recommends \
 # DO NOT REMOVE THIS LABEL: this is used for VS Code automation
     # __torizon_packages_prod_start__
+	libjson-c-dev:arm64 \
     # __torizon_packages_prod_end__
 # DO NOT REMOVE THIS LABEL: this is used for VS Code automation
 	&& apt-get clean && apt-get autoremove && rm -rf /var/lib/apt/lists/*
