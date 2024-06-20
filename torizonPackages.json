@@ -1,6 +1,8 @@
 {
     "deps": [
+        "libjson-c-dev"
     ],
-    "devDeps": [
+    "devDeps": [ 
+        "libjson-c-dev"
     ]
 }

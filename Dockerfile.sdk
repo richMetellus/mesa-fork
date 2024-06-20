@@ -22,6 +22,8 @@ ARG APP_ROOT
 RUN apt-get -q -y update && \
     apt-get -q -y install \
     cmake \
+    ruby \
+    ruby-parslet \
     # ADD YOUR PACKAGES HERE
     && \
     apt-get clean && apt-get autoremove && \
@@ -40,3 +42,8 @@ RUN apt-get -q -y update && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR ${APP_ROOT}
+
+RUN mkdir -p /opt/mscc
+
+COPY toolchains/mscc-brsdk-arm64-2024.03 /opt/mscc/mscc-brsdk-arm64-2024.03
+COPY toolchains/mscc-toolchain-bin-2023.02-101 /opt/mscc/mscc-toolchain-bin-2023.02-101
