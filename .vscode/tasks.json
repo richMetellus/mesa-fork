@@ -77,6 +77,7 @@
         },
         {
             "label": "build-configure-arm64",
+            "detail": "Configure a debug version of the application for amd64 using\nthe toolchain installed in the host container.",
             "hide": true,
             "command": "DOCKER_HOST=",
             "type": "shell",
@@ -89,7 +90,7 @@
                 "-v",
                 "${workspaceFolder}:${config:torizon_app_root}",
                 "cross-toolchain-arm64-quickstartmesademo",
-                "./cmake",
+                "${config:torizon_app_root}/build-arm64-debug/cmake",
                 "${config:torizon_app_root}",
                 "-Dapp_vsc7512=ON"
             ],
