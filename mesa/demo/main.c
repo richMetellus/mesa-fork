@@ -831,8 +831,8 @@ static mscc_appl_opt_t main_opt_reset = {
     reset_opt
 };
 
-static int  SPI_REG_IO = 0;
-static char SPI_DEVICE[512];
+static int  SPI_REG_IO = 1;
+static char SPI_DEVICE[512] = {"/dev/spidev1.0"};
 static int  SPI_PAD = 1;
 static int  SPI_FREQ = 5000000;
 static mesa_rc spidev_opt(char *parm)
